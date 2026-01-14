@@ -43,6 +43,8 @@
             </div>
             <input type="button" style="background-color: blue;" value="Calcular suma"  onclick="calcularSuma()">
             <input type="button" style="background-color: red;" value="Calcular resta" onclick="calcularResta()">
+            <input type="button" style="background-color: green;" value="Calcular multiplicacion" onclick="calcularMultiplicacion()">
+            <input type="button" style="background-color: orange;" value="calcular Division" onclick="calcularDivision()">
         </form>
 
         <div id="resultado"></div>
@@ -98,6 +100,21 @@ function calcularMultiplicacion(){
         document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
     }
 }
+    function calcularDivision(){
+      var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+     if (!isNaN(num1) && !isNaN(num2)) {
+    
+        // Calcular la division
+        var division = num1 / num2;
+
+        // Mostrar el resultado en el elemento con id "resultado"
+        document.getElementById("resultado").innerHTML = "El resultado de la division es: " + division; 
+    } else {
+        // Mostrar un mensaje de error si los valores no son números
+        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
+}
+    }
 
 </script>
 
